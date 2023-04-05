@@ -41,5 +41,23 @@ public class EjPractico03 {
         System.out.println("El vector tiene " + cant3 + " numeros de 3 digitos");
         System.out.println("El vector tiene " + cant4 + " numeros de 4 digitos");
         System.out.println("El vector tiene " + cant5 + " numeros de 5 digitos");
+        System.out.println("");
+        System.out.println("Contamos con una funcion");
+        for (int i = 0; i < vector.length; i++) {
+            int resultado = digitos(vector[i]);
+            System.out.println("Vector en posicion " + i + " = " + vector[i] + " tiene " + resultado + " digitos");
+        }
+    }
+    // Otra forma de contar cantidad de digitos con una funcion
+    public static int digitos(int num) {
+        int div = 10;
+        int digito = 0;
+        int resultado;
+        do {
+            resultado = num / div;
+            digito += 1;
+            div = div * 10;
+        } while (resultado >= 1);
+        return digito;
     }
 }

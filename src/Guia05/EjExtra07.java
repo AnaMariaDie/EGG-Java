@@ -1,5 +1,7 @@
 package Guia05;
 
+import java.util.Scanner;
+
 public class EjExtra07 {
 
     public static void main(String[] args) {
@@ -15,5 +17,23 @@ public class EjExtra07 {
         Por lo tanto, si queremos calcular el término “n” debemos escribir una función que reciba como 
         parámetro el valor de “n” y que calcule la serie hasta llegar a ese valor.        
          */
+        Scanner leer = new Scanner(System.in).useDelimiter("\n");
+        System.out.println("Ingrese un numero entero para determinar el tamaño del vector");
+        int n = leer.nextInt();
+        int vectorFibonacci[] = new int[n];
+        int a = 1;
+        int b = 1;
+        int c;
+        System.out.println("La sucesion de Fibonacci hasta el numero ingresado es: ");
+        for (int i = 0; i < n; i++) {
+            if (i < n - 1) {
+                System.out.print(a + ", ");
+            } else {
+                System.out.println(a + " ");
+            }
+            c = a + b;
+            a = b;
+            b = c;
+        }
     }
 }
