@@ -52,15 +52,30 @@ public class EjExtra06 {
     public static String[][] agregarPalabra(String[][] sopa) {
 
         Random random = new Random();
+        int val = 0;
         int k = 0;
+        int ni = 0;
+        int nj = 0;
         while (k < 5) {
+            val = ni;
+
             String palabra = comprobarPalabra();
-            int ni = random.nextInt(20 - palabra.length());
-            int nj = random.nextInt(20 - palabra.length());
-            int c = 0;
-            for (int j = 0; j < palabra.length(); j++) {
-                sopa[ni][nj + j] = palabra.toUpperCase().substring(c, c + 1);
-                c++;
+            ni = random.nextInt(20 - palabra.length());
+            nj = random.nextInt(20 - palabra.length());
+            if (val != ni) {
+                int c = 0;
+                for (int j = 0; j < palabra.length(); j++) {
+                    sopa[ni][nj + j] = palabra.toUpperCase().substring(c, c + 1);
+                    c++;
+                }
+            } else {
+                ni = random.nextInt(20 - palabra.length());
+                nj = random.nextInt(20 - palabra.length());
+                int c = 0;
+                for (int j = 0; j < palabra.length(); j++) {
+                    sopa[ni][nj + j] = palabra.toUpperCase().substring(c, c + 1);
+                    c++;
+                }
             }
             k += 1;
         }
