@@ -19,16 +19,11 @@ public class EjPractico05 {
             }
             System.out.println(" ");
         }
-        // Crear una Matriz Antisimetrica
-        for (int j = 0; j < matrizA[0].length; j++) {
-            for (int i = 0; i < matrizA[1].length; i++) {
-                matrizA[i][j] = matriz[i][j] * -1;
-            }
-        }
-        // Imprimir la Matriz Antisimetrica
+        // Crear e Imprimir una Matriz Antisimetrica
         System.out.println("Matriz Antisimetrica");
-        for (int j = 0; j < matrizA[0].length; j++) {
-            for (int i = 0; i < matrizA[1].length; i++) {
+        for (int i = 0; i < matrizA[1].length; i++) {
+            for (int j = 0; j < matrizA[0].length; j++) {
+                matrizA[i][j] = matriz[i][j] * -1;
                 System.out.print("[ " + matrizA[i][j] + " ]");
             }
             System.out.println(" ");

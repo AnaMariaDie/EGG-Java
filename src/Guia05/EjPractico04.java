@@ -1,7 +1,5 @@
 package Guia05;
 
-import java.util.Vector;
-
 public class EjPractico04 {
 
     public static void main(String[] args) {
@@ -11,6 +9,11 @@ public class EjPractico04 {
          */
         int[][] matriz = new int[4][4];
         int[][] matrizT = new int[4][4];
+        llenarMatriz(matriz);
+        transponerMatriz(matriz,matrizT);
+    }
+    // Llenar la Matriz e Imprimirla
+    public static int[][] llenarMatriz(int[][] matriz) {
         System.out.println("Matriz");
         for (int j = 0; j < matriz[0].length; j++) {
             for (int i = 0; i < matriz[1].length; i++) {
@@ -19,12 +22,16 @@ public class EjPractico04 {
             }
             System.out.println(" ");
         }
-        System.out.println("Matriz Transpuesta");
+        return matriz;
+    }
+    public static int [][] transponerMatriz(int [][]matriz, int [][]matrizT) {
+    System.out.println("Matriz Transpuesta");
         for (int i = 0; i < matriz[1].length; i++) {
             for (int j = 0; j < matriz[0].length; j++) {
                 System.out.print("[ " + matriz[i][j] + " ]");
             }
             System.out.println(" ");
         }
+        return matrizT;
     }
 }
