@@ -1,0 +1,47 @@
+comandos de github 
+
+…or create a new repository on the command line
+echo "# prueba" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/SimsonCult/prueba.git
+git push -u origin main
+…or push an existing repository from the command line
+git remote add origin https://github.com/SimsonCult/prueba.git
+git branch -M main
+git push -u origin main
+
+curso de egg
+git --help // nos muestra todos los comandos y nos explica que hace
+
+git config -l // para ver la configuracion general
+git init        ///para inicializar el repositorio de forma local
+
+git branch -M main // para crear la rama principal main
+
+copiamos la url de repositorio 
+git remote add origin <pagina del repositorio>
+                //origin va a pasar a ser el nombre para el push
+git remote -v   /// para corroborar la coneccion remota
+
+
+git status  /// para revisar si tiene consas nuevas o cambios
+
+git add . /// añade todo y lo prepara para el commit
+
+git commit-m "mensaje del commit" // carga la version de mi git(el empaquetado)
+
+git push origin master // mandar al repositorio remoto
+
+git pull origin master// traer del repositorio remoto
+
+git clone origin <direccion del repositorio>
+
+git log // muestra informacion de los commit
+
+git fetch // muestra las ramas del trabajo
+
+git checkout <nombre de la rama> // podemos movernos entre las ramas
+git checkout <codigo de un comnit>//

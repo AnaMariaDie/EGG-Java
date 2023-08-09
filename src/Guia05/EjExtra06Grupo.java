@@ -10,7 +10,7 @@ public class EjExtra06Grupo {
         String[][] sopa = new String[20][20];
         sopa = llenadoMatriz(sopa);
         impresionMatriz(sopa);
-        
+
         int randomI = 0;
         int anteriorI = 0;
         while (contador < 5) {
@@ -34,6 +34,7 @@ public class EjExtra06Grupo {
         }
         impresionMatriz(sopa);
     }
+
     // Ingreso de las 5 palabras y comprobacion de tamaño y cantidad
     public static String ingresoPalabra() {
         Scanner sc = new Scanner(System.in);
@@ -47,6 +48,7 @@ public class EjExtra06Grupo {
         }
         return palabra;
     }
+
     // Llenado de Matriz con numeros aleatorios
     public static String[][] llenadoMatriz(String[][] matriz) {
         Random random = new Random();
@@ -57,6 +59,7 @@ public class EjExtra06Grupo {
         }
         return matriz;
     }
+
     // Impresion de Matriz
     public static void impresionMatriz(String[][] matriz) {
         for (int i = 0; i < matriz.length; i++) {
